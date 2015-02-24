@@ -2,6 +2,10 @@
 
 <?php
 
+if( is_home() ) {
+    get_template_part('content/categories');
+}
+
 // The loop
 if ( have_posts() ) :
     while (have_posts() ) :
