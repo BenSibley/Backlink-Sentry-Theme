@@ -104,7 +104,7 @@ body {
 .main {
   position: relative;
   z-index: 9;
-  margin: 0 auto;
+  margin: 0 auto 3em;
   max-width: 900px;
 }
 
@@ -384,7 +384,12 @@ a img {
 }
 
 .loop-pagination {
+  clear: both;
   text-align: center;
+  padding: 0.75em 4.54531%;
+  margin: 3em 0;
+  background: white;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 .loop-pagination a,
 .loop-pagination span {
@@ -702,10 +707,10 @@ a img {
     width: 45.45313%;
     float: left;
   }
-  .blog .entry:nth-child(odd),
-  .archive .entry:nth-child(odd),
-  .search .entry:nth-child(odd),
-  .page-template-free-tools .entry:nth-child(odd) {
+  .blog .entry:nth-child(even),
+  .archive .entry:nth-child(even),
+  .search .entry:nth-child(even),
+  .page-template-free-tools .entry:nth-child(even) {
     margin-right: 9.09062%;
     clear: left;
   }
@@ -729,6 +734,18 @@ a img {
     height: 60px;
     background-image: -webkit-linear-gradient(transparent, white);
     background-image: linear-gradient(transparent, white);
+  }
+  .blog .post-header,
+  .archive .post-header,
+  .search .post-header,
+  .page-template-free-tools .post-header {
+    padding: 1.5em 9.99969% 0;
+  }
+  .blog .post-content,
+  .archive .post-content,
+  .search .post-content,
+  .page-template-free-tools .post-content {
+    padding: 0 9.99969% 1.5em;
   }
 
   .featured-image a {
@@ -1467,4 +1484,35 @@ li.comment ul {
     padding: 1.5em 0;
     max-width: 900px;
   }
+}
+.archive-header {
+  background: white;
+  padding: 0.75em 4.54531%;
+  margin-bottom: 2.25em;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+.archive-header a {
+  display: inline-block;
+  margin: 0 1.5em 0.75em 0;
+  text-decoration: none;
+  color: #536573;
+}
+.archive-header a:link, .archive-header a:visited {
+  color: #536573;
+}
+.archive-header a:hover, .archive-header a:active, .archive-header a:focus {
+  color: #536573;
+}
+.archive-header a.current {
+  font-weight: 700;
+  color: white;
+  background: #59b390;
+  padding: 4px 12px;
+  border-radius: 24px;
+}
+.archive-header a.current:link, .archive-header a.current:visited {
+  color: white;
+}
+.archive-header a.current:hover, .archive-header a.current:active, .archive-header a.current:focus {
+  color: white;
 }

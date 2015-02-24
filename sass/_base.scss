@@ -43,7 +43,7 @@ body {
 .main {
   position: relative;
   z-index: 9;
-  margin: 0 auto;
+  margin: 0 auto $baseline-height * 2;
   max-width: 900px;
 }
 p {
@@ -311,7 +311,12 @@ a img {
   margin: $baseline-height 0;
 }
 .loop-pagination {
+  clear: both;
   text-align: center;
+  padding: $baseline-height / 2 $column * 1.4545;
+  margin: $baseline-height * 2 0;
+  background: white;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
 
   a,
   span {

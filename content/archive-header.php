@@ -5,6 +5,8 @@ if( is_home() || is_category() ){
 	// get the post categories
 	$categories = get_categories();
 
+	$current_category = single_cat_title('', false);
+
 	// comma-separate posts
 	$separator = '';
 
@@ -14,10 +16,19 @@ if( is_home() || is_category() ){
 	// if there are categories for the post
 	if($categories){
 
-		echo '<div class="categories">';
+		echo '<div class="archive-header">';
+		if( is_home() ) {
+			echo '<a class="current" href="' . site_url() . '/blog/">All</a>';
+		} else {
+			echo '<a href="' . site_url() . '/blog/">All</a>';
+		}
 		foreach($categories as $category) {
-			// output category name linked to the archive
-			$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'backlink-sentry' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+			if( $category->name == $current_category ) {
+				$output .= '<a class="current" href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'backlink-sentry' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+			} else {
+				// output category name linked to the archive
+				$output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s", 'backlink-sentry' ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
+			}
 		}
 		echo trim($output, $separator);
 		echo "</div>";

@@ -190,7 +190,7 @@
       width: $column * 10 * 1.4545;
       float: left;
 
-      &:nth-child(odd) {
+      &:nth-child(even) {
         margin-right: $column * 2 * 1.4545;
         clear: left;
       }
@@ -209,6 +209,12 @@
           background-image: linear-gradient(transparent, white);
         }
       }
+    }
+    .post-header {
+      padding: $baseline-height $column * 1.4545 * 2.2 0;
+    }
+    .post-content {
+      padding: 0 $column * 1.4545 * 2.2 $baseline-height;
     }
   }
 .featured-image {
