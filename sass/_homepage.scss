@@ -1,17 +1,10 @@
 .page-template-homepage {
-  height: 100vh;
-  overflow: hidden;
 
   .overflow-container {
-    padding: 0;
+    height: 100vh;
   }
-  .main {
-    max-width: none;
-  }
-  #intro,
-  #benefits,
-  #features {
-    padding: $baseline-height $column * 2;
+  .site-footer {
+    display: none;
   }
   input[type='submit'] {
     max-width: 310px;
@@ -162,11 +155,11 @@
     }
   }
 }
-.max-width {
-  width: 87.5%;
-  max-width: 1120px;
-  margin: 0 auto;
-}
+//.max-width {
+//  width: 87.5%;
+//  max-width: 1120px;
+//  margin: 0 auto;
+//}
 
 // 600px
 @media all and (min-width: 37.5em) {

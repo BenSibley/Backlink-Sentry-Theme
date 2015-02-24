@@ -1093,20 +1093,11 @@ li.comment ul {
     margin: 1.5em 0 3em;
   }
 }
-.page-template-homepage {
-  height: 100vh;
-  overflow: hidden;
-}
 .page-template-homepage .overflow-container {
-  padding: 0;
+  height: 100vh;
 }
-.page-template-homepage .main {
-  max-width: none;
-}
-.page-template-homepage #intro,
-.page-template-homepage #benefits,
-.page-template-homepage #features {
-  padding: 1.5em 6.25%;
+.page-template-homepage .site-footer {
+  display: none;
 }
 .page-template-homepage input[type='submit'] {
   max-width: 310px;
@@ -1236,12 +1227,6 @@ li.comment ul {
 }
 .last-call input[type="submit"]:hover {
   background: #61c29d;
-}
-
-.max-width {
-  width: 87.5%;
-  max-width: 1120px;
-  margin: 0 auto;
 }
 
 @media all and (min-width: 37.5em) {
