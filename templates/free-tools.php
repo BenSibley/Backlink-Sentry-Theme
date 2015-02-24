@@ -6,15 +6,18 @@
 
 <?php get_header(); ?>
 
-	<div class="tool">
+	<div class="entry">
 		<article>
-			<div class='tool-header'>
-				<h1 class='tool-title'>
+			<div class='featured-image' style='background-image: url("<?php echo get_template_directory_uri(); ?>/assets/images/keyword-multiplier.jpg")'>
+				<a href='<?php echo get_permalink(); ?>'><?php echo get_the_title(); ?></a>
+			</div>
+			<div class='post-header'>
+				<h1 class='post-title'>
 					<a href="<?php echo trailingslashit( site_url() ) . 'keyword-multiplier/'; ?>">Keyword Multiplier</a>
 				</h1>
 				<span>Keyword Research Tool</span>
 			</div>
-			<div class="tool-content">
+			<div class="post-content">
 				<p>Find hundreds of low-competition, high-converting keywords</p>
 				<a class="more-link" href="<?php echo trailingslashit( site_url() ) . 'keyword-multiplier/'; ?>">Try it Now</a>
 			</div>

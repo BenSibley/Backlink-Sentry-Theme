@@ -22,7 +22,7 @@ h1, .intro h1 {
   /* 51px */
 }
 
-h2, .post-title, .comments-number h3, .comment-reply-title, .benefits h1, .features h1, .page-template-keyword-multiplier .tagline, .tool-title {
+h2, .post-title, .comments-number h3, .comment-reply-title, .benefits h1, .features h1, .page-template-keyword-multiplier .tagline {
   font-size: 1.75em;
   /* 28px / 16px */
   line-height: 1.321;
@@ -88,7 +88,6 @@ body {
   overflow: hidden;
   height: auto;
   min-height: 100%;
-  min-height: calc(100% - 200px);
   background: #273947;
   padding: 0 3.125%;
 }
@@ -519,19 +518,22 @@ a img {
 }
 .blog .entry,
 .archive .entry,
-.search .entry {
+.search .entry,
+.page-template-free-tools .entry {
   background: white;
   margin-bottom: 1.5em;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
 .blog .post-header,
 .archive .post-header,
-.search .post-header {
+.search .post-header,
+.page-template-free-tools .post-header {
   padding: 1.5em 4.54531% 0;
 }
 .blog .post-content,
 .archive .post-content,
-.search .post-content {
+.search .post-content,
+.page-template-free-tools .post-content {
   padding: 0 4.54531% 1.5em;
 }
 
@@ -687,28 +689,38 @@ a img {
   }
 }
 @media all and (min-width: 800px) {
+  .blog .main,
+  .archive .main,
+  .search .main,
+  .page-template-free-tools .main {
+    margin-top: 1.5em;
+  }
   .blog .entry,
   .archive .entry,
-  .search .entry {
+  .search .entry,
+  .page-template-free-tools .entry {
     width: 45.45313%;
     float: left;
   }
   .blog .entry:nth-child(odd),
   .archive .entry:nth-child(odd),
-  .search .entry:nth-child(odd) {
+  .search .entry:nth-child(odd),
+  .page-template-free-tools .entry:nth-child(odd) {
     margin-right: 9.09062%;
     clear: left;
   }
   .blog .entry article,
   .archive .entry article,
-  .search .entry article {
+  .search .entry article,
+  .page-template-free-tools .entry article {
     position: relative;
     height: 400px;
     overflow: hidden;
   }
   .blog .entry article:after,
   .archive .entry article:after,
-  .search .entry article:after {
+  .search .entry article:after,
+  .page-template-free-tools .entry article:after {
     content: '';
     position: absolute;
     right: 0;
@@ -1308,8 +1320,27 @@ li.comment ul {
 .page-template-keyword-multiplier {
   text-align: center;
 }
+.page-template-keyword-multiplier .overflow-container {
+  padding: 0 !important;
+  background: white;
+}
+.page-template-keyword-multiplier .overflow-container:after {
+  background: white;
+}
+.page-template-keyword-multiplier .main,
 .page-template-keyword-multiplier .site-header {
-  background: none;
+  max-width: none;
+}
+.page-template-keyword-multiplier .toggle-navigation {
+  color: #262f36;
+}
+.page-template-keyword-multiplier .site-header {
+  padding: 1.5em 3.125%;
+}
+.page-template-keyword-multiplier .max-width {
+  width: 87.5%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 .page-template-keyword-multiplier .menu-primary a:link, .page-template-keyword-multiplier .menu-primary a:visited {
   color: #536573;
@@ -1406,40 +1437,34 @@ li.comment ul {
   margin-top: -41px !important;
 }
 
-@media all and (min-width: 56.25em) {
+@media all and (min-width: 500px) {
   .page-template-keyword-multiplier .site-header {
-    padding-right: 6.25%;
+    padding: 1.5em 6.25%;
   }
+}
+@media all and (min-width: 700px) {
+  .page-template-keyword-multiplier .site-header {
+    padding: 1.5em 9.375%;
+  }
+}
+@media all and (min-width: 56.25em) {
   .page-template-keyword-multiplier .main,
   .page-template-keyword-multiplier .site-footer {
     width: 100%;
   }
-}
-.tool {
-  text-align: center;
-  margin: 1.5em 0 3em;
-  padding: 1.5em;
-  max-width: 680px;
-  outline: solid 1px #b3bec7;
-}
 
-.tool-title a {
-  text-decoration: none;
-  color: #536573;
-}
-.tool-title a:link, .tool-title a:visited {
-  color: #536573;
-}
-.tool-title a:hover, .tool-title a:active, .tool-title a:focus {
-  color: #59b390;
-}
-
-@media all and (min-width: 56.25em) {
-  .tool {
-    float: left;
-    width: 48%;
+  .page-template-keyword-multiplier .site-header {
+    padding: 1.5em 12.5%;
   }
-  .tool:first-child {
-    margin-right: 4%;
+}
+@media all and (min-width: 1100px) {
+  .page-template-keyword-multiplier .site-header {
+    padding: 1.5em 15.625%;
+  }
+}
+@media all and (min-width: 1310px) {
+  .page-template-keyword-multiplier .site-header {
+    padding: 1.5em 0;
+    max-width: 900px;
   }
 }

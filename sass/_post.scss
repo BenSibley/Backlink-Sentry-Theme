@@ -1,6 +1,7 @@
 .blog,
 .archive,
-.search {
+.search,
+.page-template-free-tools {
 
   .entry {
     background: white;
@@ -179,8 +180,12 @@
   // create 2 column layout
   .blog,
   .archive,
-  .search {
+  .search,
+  .page-template-free-tools {
 
+    .main {
+      margin-top: $baseline-height;
+    }
     .entry {
       width: $column * 10 * 1.4545;
       float: left;
@@ -206,7 +211,7 @@
       }
     }
   }
-  .featured-image {
+.featured-image {
 
     a {
       display: none;
