@@ -2,9 +2,7 @@
 
 <?php
 
-if( is_home() ) {
-    get_template_part('content/categories');
-}
+get_template_part('content/archive-header');
 
 // The loop
 if ( have_posts() ) :
