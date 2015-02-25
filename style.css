@@ -549,7 +549,7 @@ a img {
 }
 .singular-post .post-header,
 .error-404 .post-header {
-  padding: 1.5em 9.09062% 0;
+  padding: 1.5em 4.54531% 0;
   text-align: center;
   position: relative;
   z-index: 9;
@@ -557,7 +557,7 @@ a img {
 }
 .singular-post .post-content,
 .error-404 .post-content {
-  padding: 0 18.18125% 1.5em;
+  padding: 0 4.54531% 1.5em;
 }
 .singular-post .post-content h1, .singular-post .post-content h2, .singular-post .post-content h3, .singular-post .post-content h4, .singular-post .post-content h5, .singular-post .post-content h6,
 .error-404 .post-content h1,
@@ -693,6 +693,12 @@ a img {
     margin-top: 0.75em;
   }
 }
+@media all and (min-width: 700px) {
+  .singular-post .post-content,
+  .error-404 .post-content {
+    padding: 0 9.09062% 1.5em;
+  }
+}
 @media all and (min-width: 800px) {
   .blog .main,
   .archive .main,
@@ -765,6 +771,10 @@ a img {
   }
 }
 @media all and (min-width: 56.25em) {
+  .singular-post .post-header,
+  .error-404 .post-header {
+    padding: 1.5em 9.09062% 0;
+  }
   .singular-post .post-header h1,
   .error-404 .post-header h1 {
     font-size: 2.3125em;
@@ -772,6 +782,13 @@ a img {
     line-height: 1.378;
     /* 51px */
   }
+  .singular-post .post-content,
+  .error-404 .post-content {
+    padding: 0 13.63594% 1.5em;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 1100px) {
   .singular-post .post-content,
   .error-404 .post-content {
     padding: 0 18.18125% 1.5em;
@@ -1487,7 +1504,7 @@ li.comment ul {
 }
 .archive-header {
   background: white;
-  padding: 0.75em 4.54531%;
+  padding: 0.75em 4.54531% 0;
   margin-bottom: 2.25em;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }
